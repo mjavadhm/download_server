@@ -19,7 +19,8 @@ app = FastAPI(
 
 # --- پوشه پایه برای امنیت ---
 # تمام دانلودها برای امنیت بیشتر، داخل این پوشه انجام می‌شوند
-BASE_DOWNLOAD_DIR = Path("/data")
+# ✨ تغییر اصلی اینجاست ✨
+BASE_DOWNLOAD_DIR = Path("/app/product_db")
 
 def start_download(url: str, output_path: Path):
     """
