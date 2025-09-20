@@ -11,8 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the main application code
 COPY main.py .
 
-# Create the base directory for downloads
-RUN mkdir /data
+# ✨ تغییر اصلی اینجاست ✨
+# Create the base directory for downloads to match the persistent disk mount path
+RUN mkdir -p /app/product_db
 
 # Expose port 80 for the web server
 EXPOSE 80
